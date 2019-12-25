@@ -1,0 +1,23 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "style-loader": "^1.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
