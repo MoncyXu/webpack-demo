@@ -11,3 +11,7 @@
   font-family: "MyFont";
   background-image: url("./snow.png");
 }
+
+body{
+  background-color: #fff;
+}

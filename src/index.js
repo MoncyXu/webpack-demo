@@ -1,4 +1,5 @@
-import _ from "lodash";
+// import _ from "lodash";
+import { cube } from "./math.js";
 import "./style.css";
 import ImageSnow from "./snow.png";
 import Data from "./data.xml";
@@ -9,7 +10,7 @@ function component() {
   var btn = document.createElement("button");
 
   // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
+  // element.innerHTML = _.join(["Hello", "webpack"], " ");
   element.classList.add("hello");
 
   // 将图像添加到我们现有的div
@@ -27,4 +28,17 @@ function component() {
   return element;
 }
 
-document.body.appendChild(component());
+var element = component();
+document.body.appendChild(element);
+
+console.log("5 cubed is equal to", cube(6));
+
+if (module.hot) {
+  module.hot.accept("./print.js", function() {
+    console.log("Accepting the updated printMe module!");
+    // myPrint();
+    document.body.removeChild(element);
+    element = component();
+    document.body.appendChild(element);
+  });
+}
