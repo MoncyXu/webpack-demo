@@ -1,2 +1,2 @@
 # webpack-demo
-This is my demo of learning webpack.
+This is my demo project of learning webpack.
